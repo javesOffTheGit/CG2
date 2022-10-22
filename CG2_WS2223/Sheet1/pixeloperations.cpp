@@ -64,7 +64,7 @@ namespace cg2 {
                     faktor = faktor*log(grauWert)/2;
                 }
                 histogram_ref[grauWert]=(histogram_ref[grauWert]+faktor);
-                //std::cout << histogram_ref[grauWert]<< std::endl;
+
             }
         }
 
@@ -86,12 +86,42 @@ namespace cg2 {
      */
     QImage* changeImageDynamic(QImage * image, int newDynamicValue) {
 
+        workingImage = new QImage(*backupImage);
+        image = workingImage;
+        int felder = 256/pow(2, newDynamicValue);
+        std::cout << felder << std::endl;
         for (int i = 0; i < image->width(); i++) {
             for (int j = 0; j < image->height(); j++) {
 
+                QRgb pixel = image->pixel(i, j);
+                int prot = qRed(pixel);
+                int pgruen = qGreen(pixel);
+                int pblau = qBlue(pixel);
+                int grau = qGray(pixel);
+                int zahl = grau%felder;
+                int faktor;
+
+                if(zahl > (felder/2)){
+                   faktor = (felder - zahl);
+                } else {
+                    faktor = zahl * (-1);
+                }
+                //std::cout <<"Felder: "<< felder << "Zahl: " << zahl << "Faktor:" << faktor << std::endl;
+                int rot = prot + faktor*0.299;
+                int gruen = pgruen + faktor*0.587;
+                int blau = pblau  + faktor * 0.114;
+                image->setPixel(i, j, qRgb(rot,gruen,blau));
+
+
+                //std::cout << "Aus rot: " <<  prot  << " wurde " << rot << " " << gruen << " " << blau << " " << grau << std::endl;
+
+                // pixel setter in image with qRgb
+                // note that qRgb values must be in [0,255]
+                //image->setPixel(i, j, qRgb(rot,gruen,blau));
             }
         }
-        logFile << "Dynamik des Bildes geändert auf: " + std::to_string(newDynamicValue) + " Bit" << std::endl;
+
+        logFile << "Dynamik des Bildes geändert auf: " + std::to_string(felder) + " Bit" << std::endl;
         return image;
 
     }

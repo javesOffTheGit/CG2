@@ -5,12 +5,58 @@ Image characteristics calculated:
 --- Average: 127 ; Variance: 2172
 --- Histogram calculated: linear scaling = 1
 
+Dynamik des Bildes geändert auf: 8 Bit
 Image characteristics calculated:
---- Average: 127 ; Variance: 2172
---- Histogram calculated: linear scaling = 0
+--- Average: 126 ; Variance: 2173
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 1 Bit
 Image characteristics calculated:
 --- Average: 127 ; Variance: 2172
 --- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 2 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2172
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 1 Bit
 Image characteristics calculated:
 --- Average: 127 ; Variance: 2172
---- Histogram calculated: linear scaling = 0
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 8 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2173
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 64 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2049
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 128 Bit
+Image characteristics calculated:
+--- Average: 140 ; Variance: 908
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 64 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2049
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 128 Bit
+Image characteristics calculated:
+--- Average: 140 ; Variance: 908
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 32 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2173
+--- Histogram calculated: linear scaling = 1
+
+Dynamik des Bildes geändert auf: 2 Bit
+Image characteristics calculated:
+--- Average: 126 ; Variance: 2172
+--- Histogram calculated: linear scaling = 1
+
